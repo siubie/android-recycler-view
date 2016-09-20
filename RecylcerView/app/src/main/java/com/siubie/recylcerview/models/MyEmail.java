@@ -5,12 +5,29 @@ package com.siubie.recylcerview.models;
  */
 public class MyEmail {
     public String pengirim,subject,ringkasan,waktu;
+    public int imageId;
+
+    public MyEmail(String pengirim, String subject, String ringkasan, String waktu, int imageId) {
+        this.pengirim = pengirim;
+        this.subject = subject;
+        this.ringkasan = ringkasan;
+        this.waktu = waktu;
+        this.imageId = imageId;
+    }
 
     public MyEmail(String pengirim, String subject, String ringkasan, String waktu) {
         this.pengirim = pengirim;
         this.subject = subject;
         this.ringkasan = ringkasan;
         this.waktu = waktu;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 
     public String getPengirim() {

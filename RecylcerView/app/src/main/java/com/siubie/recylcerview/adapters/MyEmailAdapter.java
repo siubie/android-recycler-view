@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.siubie.recylcerview.R;
@@ -34,6 +35,7 @@ public class MyEmailAdapter extends RecyclerView.Adapter<MyEmailAdapter.ViewHold
         holder.ringkasan.setText(email.getRingkasan());
         holder.waktu.setText(email.getWaktu());
         holder.subject.setText(email.getSubject());
+        holder.gambar.setImageResource(email.getImageId());
     }
 
     @Override
@@ -43,12 +45,14 @@ public class MyEmailAdapter extends RecyclerView.Adapter<MyEmailAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView pengirim,subject,ringkasan,waktu;
+        public ImageView gambar;
         public ViewHolder(View itemView) {
             super(itemView);
             pengirim = (TextView) itemView.findViewById(R.id.pengirim);
             subject = (TextView) itemView.findViewById(R.id.subject);
             ringkasan = (TextView) itemView.findViewById(R.id.ringkasan);
             waktu = (TextView) itemView.findViewById(R.id.waktu);
+            gambar = (ImageView) itemView.findViewById(R.id.gambar);
         }
     }
 }

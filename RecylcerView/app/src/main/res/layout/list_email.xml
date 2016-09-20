@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/gambar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/pika"
+        />
     <TextView
         android:id="@+id/waktu"
         android:layout_alignParentRight="true"
@@ -10,6 +16,7 @@
         />
     <TextView
         android:id="@+id/pengirim"
+        android:layout_toRightOf="@id/gambar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pengirim Email"
@@ -17,12 +24,14 @@
     <TextView
         android:id="@+id/subject"
         android:layout_below="@id/pengirim"
+        android:layout_toRightOf="@+id/gambar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subject Email"
         />
     <TextView
         android:id="@+id/ringkasan"
+        android:layout_toRightOf="@+id/gambar"
         android:layout_below="@id/subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
